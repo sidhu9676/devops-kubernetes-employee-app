@@ -11,7 +11,7 @@ pipeline {
 
         stage('Checkout') {
     steps {
-        git 'https://github.com/sidhu9676/devops-kubernetes-employee-app.git'
+        git 'git@github.com:sidhu9676/devops-kubernetes-employee-app.git'
     }
 }
 
