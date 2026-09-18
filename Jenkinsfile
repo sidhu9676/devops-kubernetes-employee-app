@@ -1,4 +1,3 @@
-
 pipeline {
     agent any
 
@@ -11,13 +10,16 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'pip install -r requirements.txt'
+                sh '''
+                    python3 -m venv venv
+                    ./venv/bin/pip install -r requirements.txt
+                '''
             }
         }
 
         stage('Test') {
             steps {
-                sh 'python -m py_compile app.py'
+                sh './venv/bin/python -m py_compile app.py'
             }
         }
 
