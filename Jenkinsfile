@@ -1,4 +1,4 @@
-
+```groovy
 pipeline {
     agent any
 
@@ -7,7 +7,7 @@ pipeline {
         IMAGE_TAG = "${BUILD_NUMBER}"
     }
 
-
+    stages {
 
         stage('Build') {
             steps {
@@ -40,3 +40,4 @@ pipeline {
         }
     }
 }
+```
