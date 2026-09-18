@@ -10,10 +10,10 @@ pipeline {
     stages {
 
         stage('Checkout') {
-            steps {
-                git 'YOUR_GITHUB_REPOSITORY_URL'
-            }
-        }
+    steps {
+        git 'https://github.com/sidhu9676/devops-kubernetes-employee-app.git'
+    }
+}
 
         stage('Build') {
             steps {
