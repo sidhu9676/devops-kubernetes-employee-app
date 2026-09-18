@@ -7,13 +7,7 @@ pipeline {
         IMAGE_TAG = "${BUILD_NUMBER}"
     }
 
-    stages {
 
-        stage('Checkout') {
-    steps {
-        git 'git@github.com:sidhu9676/devops-kubernetes-employee-app.git'
-    }
-}
 
         stage('Build') {
             steps {
